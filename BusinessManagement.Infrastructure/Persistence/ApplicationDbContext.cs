@@ -12,5 +12,7 @@ namespace BusinessManagement.Infrastructure.Persistence
         }
 
         public DbSet<ApplicationUser> ApplicationUsers => Set<ApplicationUser>();
+
+        //public DbSet<ApplicationUser> Users { get; set; }
     }
 }

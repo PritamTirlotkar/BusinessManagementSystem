@@ -1,9 +1,12 @@
+using BusinessManagement.Application.Interfaces;
 using BusinessManagement.Domain.Entities;
 using BusinessManagement.Infrastructure.Persistence;
+using BusinessManagement.Infrastructure.Services.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
